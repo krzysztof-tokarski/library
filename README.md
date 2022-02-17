@@ -13,5 +13,5 @@ Things that need improvement:
 - responsiveness;
 - animations, currently stuff pop-up out of nowhere, don't feel confident with these as of now, will result in a huge time-sink right now;
 - form validation and limitations on inputs; 
-- some visual improvements, page lacks in readability when the form pops-up and there are already some cards added to the dom;
+- some visual improvements, page lacks in readability when the form pops-up and there are already some cards added to the dom; and
 - possibly some performance improvements (at the moment even slight modifications, like changing the haveRead status, or deleting a book, require whole display to be generated from the start, haven't figured out any other solution so far). 
