@@ -12,11 +12,13 @@ formButton.addEventListener("click",addBookToLibrary);
 
 let myLibrary = [];
 
-function Book(author,title,numberOfPages,haveRead) {
-  this.author = author;
-  this.title = title;
-  this.numberOfPages = numberOfPages;
-  this.haveRead = haveRead;
+class Book {
+  constructor(author,title,numberOfPages,haveRead) {
+    this.author = author;
+    this.title = title;
+    this.numberOfPages = numberOfPages;
+    this.haveRead = haveRead;
+  }
 }
 
 
