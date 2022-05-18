@@ -12,11 +12,13 @@ formButton.addEventListener("click",addBookToLibrary);
 
 let myLibrary = [];
 
-function Book(author,title,numberOfPages,haveRead) {
-  this.author = author;
-  this.title = title;
-  this.numberOfPages = numberOfPages;
-  this.haveRead = haveRead;
+class Book {
+  constructor(author,title,numberOfPages,haveRead) {
+    this.author = author;
+    this.title = title;
+    this.numberOfPages = numberOfPages;
+    this.haveRead = haveRead;
+  }
 }
 
 
@@ -26,6 +28,13 @@ function addBookToLibrary() {
   let title = document.getElementById("title").value;
   let numberOfPages = document.getElementById("number-of-pages").value;
   let haveRead = document.getElementById("have-read");
+
+  const requiredControls = [author,title,numberOfPages];
+
+  const emptyControls = requiredControls.filter(control => control === "");
+  if (emptyControls.length !== 0) {
+    return alert('not every required field was properly supplemented')
+  }
 
   if (haveRead.checked) {
     haveRead.value = "yes"
